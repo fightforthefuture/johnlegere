@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box
+}
+
+html, body {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: @body-font;
+    position: relative;
+    padding: 0px 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: @heading-font;
+}
+
+h1 {
+    font-size: 2.7rem;
+    line-height: 3rem;
+    padding: 2rem 0rem 2rem 0rem;
+
+    @media screen and (min-width: 600px) {
+        font-size: 4.3rem;
+        line-height: 5rem;
+        padding: 5rem 0rem 2rem 0rem;
+    }
+    text-align: center;
+    max-width: 768px;
+    margin: 0px auto;
+
+}
+
+h2 {
+    font-size: 2.0rem;
+    line-height: 2.3rem;
+    padding: 0rem 0rem 2rem 0rem;
+
+    @media screen and (min-width: 600px) {
+        font-size: 3.3rem;
+        line-height: 4rem;
+        padding: 2rem 0rem 2rem 0rem;
+    }
+    text-align: center;
+    max-width: 768px;
+    margin: 0px auto;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+#content {
+    position: absolute;
+    text-align: center;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: black;
+
+    transition: opacity 1s linear;
+    -moz-transition: opacity 1s linear;
+    -webkit-transition: opacity 1s linear;
+    -ms-transition: opacity 1s linear;
+    -o-transition: opacity 1s linear;
+
+    display: none;
+    opacity: 0;
+    z-index: 9002;
+    padding: 0px 10px 50px 10px;
+
+    color: #ddd;
+
+    h1 {
+        color: white;
+    }
+}
+
+.ceos {
+    margin: 0px auto;
+    text-align: center;
+    max-width: 400px;
+    position: relative;
+
+    #guess {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        background: white;
+        pointer-events: none;
+        display: table;
+        z-index: 9001;
+        opacity: 1;
+
+        &.fade {
+            transition: opacity 1s linear;
+            -moz-transition: opacity 1s linear;
+            -webkit-transition: opacity 1s linear;
+            -ms-transition: opacity 1s linear;
+            -o-transition: opacity 1s linear;
+            opacity: 0;
+        }
+
+        height: 295px;
+        font-family: @heading-font;
+        font-size: 50px;
+
+        @media screen and (min-width: 600px) {
+            display: none;
+            height: 550px;
+            font-size: 95px;
+        }
+
+        em {
+            display: table-cell;
+            vertical-align: middle;
+            color: red;
+        }
+
+        &.correct {
+            em {
+                color: green;
+            }
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+        max-width: 600px;
+    }
+
+    a.ceo {
+        display: inline-block;
+        position: relative;
+
+        width: 135px;
+        height: 135px;
+        border: 0px solid white;
+        margin: 5px;
+        border-radius: 10px;
+
+        @media screen and (min-width: 600px) {
+            margin: 0px;
+            width: 270px;
+            height: 270px;
+            border: 10px solid white;
+
+            &:hover {
+                border: 10px solid #ff8;
+            }
+        }
+
+        &.att {
+            background: url(/images/att.jpg);
+            background-size: 100% 100%;
+        }
+        &.tmobile {
+            background: url(/images/tmobile.jpg);
+            background-size: 100% 100%;
+        }
+        &.sprint {
+            background: url(/images/sprint.jpg);
+            background-size: 100% 100%;
+        }
+        &.verizon {
+            background: url(/images/verizon.jpg);
+            background-size: 100% 100%;
+        }
+
+        span {
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            background: rgba(0, 0, 0, .5);
+            color: white;
+            text-align: center;
+            padding: 2px;
+            font-size: 13px;
+
+            em {
+                display: none;
+            }
+
+            @media screen and (min-width: 600px) {
+                font-size: 16px;
+
+                em {
+                    display: inline;
+                }
+            }
+
+            strong {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    @media screen and (min-width: 600px) {
+        font-size: 2.2rem;
+        line-height: 3.1rem;
+    }
+    margin: 0px auto;
+    max-width: 748px;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    strong {
+        font-weight: bold;
+    }
+
+}
+
+a {
+    color: #ffa;
+}
+
+button.social {
+    margin: 5px 0px;
+}
+
+
+footer {
+
+    padding: 50px 0px 100px 0px;
+
+    @media screen and (min-width: 600px) {
+        padding-top: 100px;
+    }
+
+    p {
+        font-size: 20px;
+        margin: 0px auto;
+        color: gray;
+    }
+
+    img {
+        display: inline-block;
+        max-width: 270px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    em {
+        font-size: 70%;
+    }
+}

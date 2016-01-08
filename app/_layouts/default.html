@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    {% include meta.html %}
+</head>
+<body>
+    <h1>One of these CEOs tries to act like your cool uncle, but actually censors his customers' Internet. Can you guess which one?</h1>
+
+    <div class="ceos">
+
+        <div id="guess"><em>GUESS AGAIN!</em></div>
+
+        <a href="#" class="ceo att">
+            <span><strong>Randall Stephenson</strong><em> &mdash; AT&T</em></span>
+        </a>
+        <a href="#" class="ceo sprint">
+            <span><strong>Marcelo Claure</strong><em> &mdash; Sprint</em></span>
+        </a>
+        <a href="#" class="ceo verizon">
+            <span><strong>Lowell McAdam</strong><em> &mdash; Verizon</em></span>
+        </a>
+        <a href="#" class="ceo tmobile">
+            <span><strong>John Legere</strong><em> &mdash; T-Mobile</em></span>
+        </a>
+    </div>
+
+    <div id="content">
+        {{ content }}
+        <div class="share">
+            <button class="social facebook">Share this page</button>
+            <button class="social twitter">Tweet this page</button>
+        </div>
+        <footer>
+            <p>Made by</p>
+            <img src="/images/fftf_logo.png"/>
+            <p><em>(and paid for by small individual donors, just like the EFF)</em></p>
+        </footer>
+    </div>
+
+{% include scripts.html %}
+</body>
+</html>
