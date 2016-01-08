@@ -17,9 +17,13 @@
             as[i].addEventListener('click', function(e) {
                 e.preventDefault();
 
-                if (e.target.className.indexOf('tmobile') !== -1) {
+                if (e.target.className.indexOf('verizon') !== -1) {
+                    document.getElementById("guess").innerHTML = '<em>CLOSE...</em>';
+                } else if (e.target.className.indexOf('tmobile') !== -1) {
                     document.getElementById("guess").innerHTML = '<em>YUP!</em>';
                     document.getElementById("guess").className = 'correct';
+                } else {
+                    document.getElementById("guess").innerHTML = '<em>GUESS AGAIN!</em>';
                 }
 
                 document.getElementById("guess").style.display = 'table';
